@@ -21,7 +21,8 @@ struct ContentView: View {
     @State private var selectedImage: String? = "red"
     @State private var showRedShadow: Bool = false
     let defaults = UserDefaults.standard
-    
+    @StateObject private var locationManager = LocationManager()
+
     var body: some View {
         NavigationView{
         VStack {
