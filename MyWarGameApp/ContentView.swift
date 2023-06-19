@@ -43,11 +43,20 @@ struct ContentView: View {
                         
                     }
                 Spacer()
-                Text("Pick your color")
-                    .font(.title)
-                    .foregroundColor(.white)
-                    .shadow(color:.black, radius:2, x:0, y:0)
-                    .padding()
+                VStack{
+                    Text("Pick your color")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .shadow(color:.black, radius:2, x:0, y:0)
+                            .padding()
+                    Spacer()
+                    Text("User's Longitude: \(locationManager.userLongitude ?? 0)")
+                        .font(.title)
+                                .foregroundColor(.white)
+                                .shadow(color:.black, radius:2, x:0, y:0)
+                                .padding()
+                }
+                
                 Spacer()
                 Image("ace_of_hearts")
                     .resizable()
